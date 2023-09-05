@@ -46,7 +46,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     environment:
-      JWKS_URI: http://aulasquindio.local/auth/realms/aulassteamquindio/protocol/openid-connect/certs
+      JWKS_URI: http://aulasquindio.local:8080/auth/realms/aulassteamquindio/protocol/openid-connect/certs
       DB_HOST: host.docker.internal
       DB_PORT: 3306
       DB_USER: root
@@ -55,10 +55,9 @@ services:
       KEYCLOAK_DB_HOST: host.docker.internal
       KEYCLOAK_DB_PORT: 5432
       KEYCLOAK_DB_USER: keycloak
-      KEYCLOAK_DB_PASSWORD: "%Aqrme3020"
       KEYCLOAK_DB_NAME: keycloak
       KEYCLOAK_API_URL: /admin/realms/aulassteamquindio
-      KEYCLOAK_BASE_URL: http://aulasquindio.local/auth
+      KEYCLOAK_BASE_URL: http://aulasquindio.local:8080/auth
       KEYCLOAK_CLIENT_ID: client-api
       KEYCLOAK_CLIENT_SECRET: ZwwyVH63X1HfSOsvcLSNxoK4xLjuwHYg
       KEYCLOAK_GET_TOKEN_URL: /realms/aulassteamvalle/protocol/openid-connect/token
@@ -76,12 +75,13 @@ services:
     environment:
       KEYCLOAK_CLIENT_ID: si-frontend
       KEYCLOAK_CLIENT_SECRET: 616a597f-2af2-409d-bbd6-f5a0787d90d7
-      KEYCLOAK_HOST: http://aulasquindio.local/auth
+      KEYCLOAK_HOST: http://aulasquindio.local:8080/auth
       KEYCLOAK_REALM: aulassteamquindio
       NEXT_PUBLIC_DEFAULT_AUTH_PROVIDER: keycloak
-      NEXT_PUBLIC_BACKEND: http://aulasquindio.local/api
-      NEXTAUTH_URL: http://aulasquindio.local/si
+      NEXT_PUBLIC_BACKEND: http://aulasquindio.local:4000
+      NEXTAUTH_URL: http://aulasquindio.local:3000
       NEXT_PUBLIC_DATABASE_KEY_NAME: bilinguismo_db
+      NEXT_PUBLIC_URL_DATA_SYNC: https://sync.aulasquindio.com.co/data
 
     ports: 
       - "3000:3000"
@@ -92,7 +92,7 @@ services:
       - aulas-steam-net
 
   moodle:
-    image: php:7.4.33-apache-bullseye
+    image: php:7.4-apache
     container_name: aulas_quindio_moodle
     restart: always
     extra_hosts:
