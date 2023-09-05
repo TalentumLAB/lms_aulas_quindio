@@ -92,7 +92,7 @@ services:
       - aulas-steam-net
 
   moodle:
-    image: prasa25/php7.4-apache-mssql
+    image: akbartk/codeigniter3-php74-apache
     container_name: aulas_quindio_moodle
     restart: always
     extra_hosts:
