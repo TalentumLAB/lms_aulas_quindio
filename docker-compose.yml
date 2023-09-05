@@ -19,7 +19,7 @@ services:
       KEYCLOAK_DATABASE_PORT: 5432
       KEYCLOAK_DATABASE_NAME: keycloak
       KEYCLOAK_DATABASE_USER: keycloak
-      KEYCLOAK_DATABASE_PASSWORD: "%Aqrme3020"
+      KEYCLOAK_DATABASE_PASSWORD: '%Aqrme3020'
       KEYCLOAK_DATABASE_SCHEMA: public
       KEYCLOAK_HTTP_PORT: 8080
       KEYCLOAK_HTTPS_PORT: 8443
@@ -50,12 +50,12 @@ services:
       DB_HOST: host.docker.internal
       DB_PORT: 3306
       DB_USER: root
-      DB_PASSWORD: "%Aqrme3020"
+      DB_PASSWORD: '%Aqrme3020'
       DB_DATABASE: simat_db
       KEYCLOAK_DB_HOST: host.docker.internal
       KEYCLOAK_DB_PORT: 5432
       KEYCLOAK_DB_USER: keycloak
-      KEYCLOAK_DB_PASSWORD: "%Aqrme3020"
+      KEYCLOAK_DB_PASSWORD: '%Aqrme3020'
       KEYCLOAK_DB_NAME: keycloak
       KEYCLOAK_API_URL: /admin/realms/aulassteamquindio
       KEYCLOAK_BASE_URL: http://aulasquindio.local/auth
@@ -102,7 +102,7 @@ services:
       MOODLE_DATABASE_HOST: host.docker.internal
       MOODLE_DATABASE_PORT_NUMBER: 3306
       MOODLE_DATABASE_USER: root
-      MOODLE_DATABASE_PASSWORD: "%Aqrme3020"
+      MOODLE_DATABASE_PASSWORD: '%Aqrme3020'
       MOODLE_DATABASE_NAME: moodledb
       MOODLE_SKIP_BOOTSTRAP: true
     ports:
