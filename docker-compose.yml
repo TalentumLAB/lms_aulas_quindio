@@ -40,7 +40,7 @@ services:
       - aulas-steam-net
 
   backend:
-    image: bilinguismotalentum/backend:quindio-1.0.0
+    image: bilinguismotalentum/backend:1.1.0
     container_name: aulas_steam_reporter_backend
     restart: always
     extra_hosts:
