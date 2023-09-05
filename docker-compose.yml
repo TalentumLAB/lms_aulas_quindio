@@ -92,7 +92,7 @@ services:
       - aulas-steam-net
 
   moodle:
-    image: ellakcy/moodle:mysql_maria_apache_php7.4_202307010216
+    image: prasa25/php7.4-apache-mssql
     container_name: aulas_quindio_moodle
     restart: always
     extra_hosts:
