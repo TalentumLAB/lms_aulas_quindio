@@ -92,26 +92,18 @@ services:
       - aulas-steam-net
 
   moodle:
-    image: docker.io/bitnami/moodle:4
+    image: php:7.4.33-apache-bullseye
     container_name: aulas_quindio_moodle
     restart: always
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    environment:
-      MOODLE_DATABASE_TYPE: mysqli
-      MOODLE_DATABASE_HOST: host.docker.internal
-      MOODLE_DATABASE_PORT_NUMBER: 3306
-      MOODLE_DATABASE_USER: root
-      MOODLE_DATABASE_PASSWORD: '%Aqrme3020'
-      MOODLE_DATABASE_NAME: moodledb
-      MOODLE_SKIP_BOOTSTRAP: true
     ports:
-      - '5000:8080'
+      - '5000:80'
     networks:
       - aulas-steam-net
     volumes:
-      - '/apps/moodle/moodledata:/bitnami/moodledata'
-      - '/apps/moodle/moodle:/bitnami/moodle'
+      - '/apps/moodle/moodledata:/var/www/moodledata'
+      - '/apps/moodle/moodle:/var/www/html/moodle'
     
 networks:
   aulas-steam-net:
