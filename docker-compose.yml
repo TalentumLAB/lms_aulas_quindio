@@ -103,7 +103,7 @@ services:
       - aulas-steam-net
     volumes:
       - '/apps/moodle/moodledata:/var/www/moodledata'
-      - '/apps/moodle/moodle:/var/www/html/moodle'
+      - '/apps/moodle/moodle:/var/www/html'
     
 networks:
   aulas-steam-net:
