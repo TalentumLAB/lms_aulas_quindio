@@ -36,8 +36,6 @@ services:
     volumes:
       - ./keycloak/config:/opt/bitnami/keycloak/data/import
       - ./keycloak/theme:/opt/bitnami/keycloak/providers
-    depends_on:
-      - mailhog
     networks:
       - aulas-steam-net
 
