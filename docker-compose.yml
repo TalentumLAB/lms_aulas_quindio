@@ -60,8 +60,8 @@ services:
       KEYCLOAK_API_URL: /admin/realms/aulassteamquindio
       KEYCLOAK_BASE_URL: http://aulasquindio.local:8080/auth
       KEYCLOAK_CLIENT_ID: client-api
-      KEYCLOAK_CLIENT_SECRET: ZwwyVH63X1HfSOsvcLSNxoK4xLjuwHYg
-      KEYCLOAK_GET_TOKEN_URL: /realms/aulassteamvalle/protocol/openid-connect/token
+      KEYCLOAK_CLIENT_SECRET: JNbF4R1FXMJhYVUuZHDNRYUfatfuBH8D
+      KEYCLOAK_GET_TOKEN_URL: /realms/aulassteamquindio/protocol/openid-connect/token
       OVERRIDE_DB_HOST: host.docker.internal
       OVERRIDE_DB_PASSWORD: "%Aqrme3020"
       OVERRIDE_DB_PORT: 3306
