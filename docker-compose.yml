@@ -40,7 +40,7 @@ services:
       - aulas-steam-net
 
   backend:
-    image: bilinguismotalentum/backend:1.1.0
+    image: bilinguismotalentum/backend:1.2.7
     container_name: aulas_steam_reporter_backend
     restart: always
     extra_hosts:
@@ -56,11 +56,17 @@ services:
       KEYCLOAK_DB_PORT: 5432
       KEYCLOAK_DB_USER: keycloak
       KEYCLOAK_DB_NAME: keycloak
+      KEYCLOAK_DB_PASSWORD: "%Aqrme3020"
       KEYCLOAK_API_URL: /admin/realms/aulassteamquindio
       KEYCLOAK_BASE_URL: http://aulasquindio.local:8080/auth
       KEYCLOAK_CLIENT_ID: client-api
       KEYCLOAK_CLIENT_SECRET: ZwwyVH63X1HfSOsvcLSNxoK4xLjuwHYg
       KEYCLOAK_GET_TOKEN_URL: /realms/aulassteamvalle/protocol/openid-connect/token
+      OVERRIDE_DB_HOST: host.docker.internal
+      OVERRIDE_DB_PASSWORD: "%Aqrme3020"
+      OVERRIDE_DB_PORT: 3306
+      OVERRIDE_DB_USER: roor
+
     ports:
       - "4000:4000"
     depends_on:
