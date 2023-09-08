@@ -40,7 +40,7 @@ services:
       - aulas-steam-net
 
   backend:
-    image: bilinguismotalentum/backend:1.2.7
+    image: bilinguismotalentum/backend:1.2.8
     container_name: aulas_steam_reporter_backend
     restart: always
     extra_hosts:
@@ -98,7 +98,7 @@ services:
       - aulas-steam-net
 
   moodle:
-    image: akbartk/codeigniter3-php74-apache
+    image: bilinguismotalentum/php74-apache2:1.0.0
     container_name: aulas_quindio_moodle
     restart: always
     extra_hosts:
