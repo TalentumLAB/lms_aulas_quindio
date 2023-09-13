@@ -85,7 +85,7 @@ services:
       KEYCLOAK_REALM: aulassteamquindio
       NEXT_PUBLIC_DEFAULT_AUTH_PROVIDER: keycloak
       NEXT_PUBLIC_BACKEND: http://aulasquindio.local:4000
-      NEXTAUTH_URL: http://aulasquindio.local:3000
+      NEXTAUTH_URL: http://si.aulasquindio.local
       NEXT_PUBLIC_DATABASE_KEY_NAME: bilinguismo_db
       NEXT_PUBLIC_URL_DATA_SYNC: https://sync.aulasquindio.com.co/data
 
