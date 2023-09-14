@@ -49,7 +49,7 @@ services:
       JWKS_URI: http://aulasquindio.local:8080/auth/realms/aulassteamquindio/protocol/openid-connect/certs
       DB_HOST: host.docker.internal
       DB_PORT: 3306
-      DB_USER: reporter
+      DB_USER: root
       DB_PASSWORD: "%Aqrme3020"
       DB_DATABASE: simat_db
       KEYCLOAK_DB_HOST: host.docker.internal
@@ -65,7 +65,7 @@ services:
       OVERRIDE_DB_HOST: host.docker.internal
       OVERRIDE_DB_PASSWORD: "%Aqrme3020"
       OVERRIDE_DB_PORT: 3306
-      OVERRIDE_DB_USER: reporter
+      OVERRIDE_DB_USER: root
 
     ports:
       - "4000:4000"
@@ -75,7 +75,7 @@ services:
       - aulas-steam-net
 
   frontend:
-    image: bilinguismotalentum/frontend:quindio-1.0.0
+    image: bilinguismotalentum/frontend:quindio-1.0.2
     container_name: aulas_steam_reporter_frontend
     restart: always
     environment:
