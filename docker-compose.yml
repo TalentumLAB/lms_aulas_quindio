@@ -75,7 +75,7 @@ services:
       - aulas-steam-net
 
   frontend:
-    image: bilinguismotalentum/frontend:quindio-1.0.2
+    image: bilinguismotalentum/frontend:0.1.2-quindio
     container_name: aulas_steam_reporter_frontend
     restart: always
     environment:
